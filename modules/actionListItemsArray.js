@@ -1,13 +1,21 @@
 import {lat,lng} from "./geolocation.js"
+import {sendCityState} from "./avatar.js"
 
 console.log(lat,lng)
-let city = "Atlanta"
 
-export let actionListItemsArray = {
+let city
+let state
+
+export default () => {
+    [city,state] = sendCityState()
+    console.log(city,state)
+}
+
+export let actionListItemsArray = () => ({
     "blm":[
         {
             "icon" : "modules/img/secondicon.png",
-            "item" : `Donate to ${location} Black Lives Matter`,
+            "item" : `Donate to ${city} Black Lives Matter`,
             "url": ``,
             "points" : 200
         },
@@ -51,6 +59,6 @@ export let actionListItemsArray = {
         },
         
     ]
-}
+})
 
-export default actionListItemsArray
+// export default actionListItemsArray
