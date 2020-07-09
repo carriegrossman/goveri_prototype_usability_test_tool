@@ -253,7 +253,7 @@ select {
     display:flex;
     justify-content: space-between;
     align-items: center;
-    margin:0 10px;
+    margin:0 20px;
     color:white;
 }
 
@@ -287,7 +287,6 @@ button:hover {
 .position {
     display:flex;
     align-items:center;
-    margin-left:30px;
 }
 
 .badge {
@@ -297,11 +296,8 @@ button:hover {
 }
 
 #info {
-    position:absolute;
-    left:0;
-    right:0;
-    top:250px;
-    margin:15px;
+    position:relative;
+    top:-300px;
     color:white;
     max-height:250px;
     min-height:250px;
@@ -309,7 +305,6 @@ button:hover {
     margin-top:0px;
     border-radius:5px;
     padding:0 20px;
-    z-index:0;
 }
 
 .next-button {
