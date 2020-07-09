@@ -2,8 +2,8 @@ import {firstName, lastName} from "./signupform.js"
 import hardPoints from "./points.js"
 import zip from "./zipcode.js"
 
-let city = null;
-let state = null;
+let city
+let state
 
 let avatarHtml = () => {
     // <div> "root"
@@ -116,4 +116,8 @@ export const addState = (city,state) => {
 export const receive = (city_,state_) =>{
     city = city_
     state = state_
+}
+
+export let sendCityState = () => {
+    return [city,state]
 }
