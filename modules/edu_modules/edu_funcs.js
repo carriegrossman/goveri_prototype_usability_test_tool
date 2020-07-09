@@ -20,7 +20,7 @@ let j = 0
     nextButton.className = "next-button"
     nextButton.innerText = "Next" 
     
-    let goveriPoints = 0
+    export let goveriPoints = 0
     export let goveriPointsDisplay = document.createElement('h3')
     
     goveriPointsDisplay.className = "points-display"
@@ -87,7 +87,7 @@ export default () => {
         //EVENTUALLY: add a timer to keep track of how much time they spend on each bit of information, don't add to score unless they spend at least 10 seconds on each piece of info
         
         //display facts, quiz questions
-        fact = positions[j].facts[counter]
+        let fact = positions[j].facts[counter]
         if(counter>10 && positions[j].points>=50){
             fact = `Nice work! You earned your ${positions[j].title} badge!`
         }else if (counter>10){
