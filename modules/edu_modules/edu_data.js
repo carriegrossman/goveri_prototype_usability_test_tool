@@ -72,10 +72,10 @@ export const positions = [
                 "Process all county taxes"//correct
             ],
             [
-                "Abstaining from voting",//correct
+                "Communicating your issue or vote directly through an app",//correct
                 "Running for and being elected as a board member of your county's council/commission",
                 "Attending regularly scheduled public meetings",
-                "Phone and email"
+                "Phone calls and email"
             ],
             [
                 "~$68,000",//correct
@@ -148,7 +148,7 @@ export const positions = [
                 "Managing county jails",
                 "Respresenting community members at forums with county councilmembers",//correct
                 "Security for government buildings",
-                "Maintain a register of all precious-metal dealers"
+                "Maintaining a register of all precious-metal dealers"
             ],
             [
                 "Transport and maintain custody of incarcerated indivduals",
@@ -194,7 +194,7 @@ export const positions = [
         quizQ: [
             "All of the following are duties of the School Board except:",
             "Additional responsibilities of School Board members include:",
-            "The superintendent approves a change to a school's budget.",
+            "The superintendent makes the final approval of a change to a school's budget.",
             "All School Board officials work full-time in exchange for salaries",
             "Which of the following is NOT a way to become a School Board member?"
         ],

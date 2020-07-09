@@ -77,6 +77,16 @@ select {
         box-sizing: border-box;
     }
 
+.signUpButton{
+    width: 50%;
+    padding: 12px 20px;
+    margin: 100px 0px 0px 75px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
 
 /*-- Eric's CSS --*/
 .main {
@@ -253,7 +263,7 @@ select {
     display:flex;
     justify-content: space-between;
     align-items: center;
-    margin:0 20px;
+    margin:0 10px;
     color:white;
 }
 
@@ -287,6 +297,7 @@ button:hover {
 .position {
     display:flex;
     align-items:center;
+    margin-left:30px;
 }
 
 .badge {
@@ -296,8 +307,11 @@ button:hover {
 }
 
 #info {
-    position:relative;
-    top:-300px;
+    position:absolute;
+    left:0;
+    right:0;
+    top:250px;
+    margin:15px;
     color:white;
     max-height:250px;
     min-height:250px;
@@ -305,6 +319,7 @@ button:hover {
     margin-top:0px;
     border-radius:5px;
     padding:0 20px;
+    z-index:0;
 }
 
 .next-button {
