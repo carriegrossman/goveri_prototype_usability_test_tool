@@ -38,6 +38,8 @@ export default () => {
             //open link.js module (which has a "back" button that closes the link.js module and adds to the points)
             link()
             addPoints()
+            //first, would be to open the link in a new tab
+            //container that would open the url in the link div
             //use the item's url in actionListItemsArray.js as what displays in link.js
         })
 
