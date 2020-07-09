@@ -26,7 +26,7 @@
     display: block;
 } */
 
-  input[class="signupInput"]{
+input[class="signupInput"]{
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -34,7 +34,7 @@
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
-  }
+}
 
 
 input[id=email]{
@@ -45,7 +45,7 @@ input[id=email]{
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
-  }
+}
 
 .signupSubmit{
     width: 100%;
@@ -65,7 +65,7 @@ select {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
-  }
+}
     
 .surveySubmit{
         width: 100%;
@@ -222,7 +222,7 @@ select {
 
 @keyframes fadeOut {
     0% {
-      background-size:280%;
+    background-size:280%;
     }
     
 }
@@ -324,7 +324,7 @@ button:hover {
 
 @keyframes fadeIn {
     0% {
-      opacity: 0;
+    opacity: 0;
     }
     
 }
