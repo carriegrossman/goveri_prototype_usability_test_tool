@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goveri Prototype Tool</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="intro.js-2.9.3/minified/introjs.min.css">
+</head>
+<body>
+    <div id="root"></div>
+    <div id="positionButtonsContainer" display="none">
+        <div id="ceoContainer" class="position">
+            <button id='ceo' class="positionButton">County Chief Executive Officer</button>
+        </div>
+        <div id="sheriffContainer" class="position">
+            <button id='sheriff' class="positionButton">Sheriff</button>
+        </div>
+        <div id="boeContainer" class="position">
+            <button id='boe' class="positionButton">Board of Education</button></li>
+        </div>
+    </div>
+    <div id="info"></div>
+        <!-- VOTER INFORMATION TOOL -->
+<script type="text/javascript" src="https://tool.votinginfoproject.org/app.js"></script>
+<div id="_vit"></div>
+<script type="text/javascript">vit.load({
+    modal: true,
+    theme: 'https://tool.votinginfoproject.org/images/theme3.png',
+    officialOnly: false,
+    title: 'You Goveri hard!',
+    subtitle: "Keep up the important work and earn more points",
+    width: '640px',
+    height: '480px',
+    colors: {
+    'header': '#229acd',
+    'landscapeBackgroundHeader': '#228a9d'
+    },
+    language: 'en',
+});</script>
+    <script src="modules/main.js" type="module"></script>
+    <script src="intro.js-2.9.3/minified/intro.min.js"></script>
+</body>
+</html>
