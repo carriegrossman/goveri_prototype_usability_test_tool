@@ -77,6 +77,16 @@ select {
         box-sizing: border-box;
     }
 
+.signUpButton{
+    width: 50%;
+    padding: 12px 20px;
+    margin: 100px 0px 0px 75px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
 
 /*-- Eric's CSS --*/
 .main {

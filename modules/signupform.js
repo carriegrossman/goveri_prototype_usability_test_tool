@@ -6,12 +6,13 @@ export let firstName = document.createElement("input");
 export let lastName = document.createElement("input");
 export let zip = document.createElement("input");
 
+
 const signUpForm = () => {
     let x = document.getElementById("root");
     let form = document.createElement("form");
     form.setAttribute("action", "");
     form.setAttribute("method", "post");
-    form.setAttribute("id", "form");
+    form.id = "form"
 
     x.append(form);
 
@@ -21,7 +22,8 @@ const signUpForm = () => {
     
     let fill = document.createElement("p")
     fill.innerText = "Please fill in this form."
-    form.append(fill);    
+    form.append(fill);
+
 
     let line = document.createElement('hr');
     form.append(line);
@@ -47,7 +49,7 @@ const signUpForm = () => {
 
     // let lastName = document.createElement("input");
     lastName.setAttribute("type", "text");
-    lastName.setAttribute("id", "name");
+    lastName.setAttribute("id", "lastName");
     lastName.classList.add("signupInput");
     lastName.setAttribute("placeholder", "Enter Last Name");
     form.append(lastName);
@@ -71,7 +73,7 @@ const signUpForm = () => {
 
     // let zip = document.createElement("input");
     zip.setAttribute("type", "zip");
-    zip.setAttribute("id", "zip");
+    zip.id=zip;
     zip.classList.add("signupInput");
     zip.setAttribute("placeholder", "Enter Zip Code");
     form.append(zip)
@@ -101,7 +103,7 @@ const signUpForm = () => {
 
     let submitButton = document.createElement("button")
     submitButton.innerText = "Submit"
-    submitButton.setAttribute("type", "submit");
+    submitButton.type= "submit";
     submitButton.classList.add("signupSubmit");
     form.append(submitButton)
 
@@ -118,5 +120,8 @@ const signUpForm = () => {
     
     // console.log('this function should load the signup form')
 }
+
+
+
 
 export default signUpForm

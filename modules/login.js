@@ -2,8 +2,8 @@ export let signUpButton = document.createElement("button")
 export let loginButton = document.createElement("button")
 
 
-signUpButton.setAttribute("class", "button")
-loginButton.setAttribute("class", "button")
+signUpButton.setAttribute("class", "signUpButton")
+// loginButton.setAttribute("class", "button")
 
 let login = () => {
 
