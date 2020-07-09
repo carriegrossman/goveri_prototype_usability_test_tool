@@ -1,15 +1,17 @@
-import actionListItemsArray from "./actionListItemsArray.js"
-import { pointDisplay } from "./avatar.js"
+// import actionListItemsArray from "./actionListItemsArray.js"
+// import { pointDisplay } from "./avatar.js"
 
-export let hardPoints = 0
-export let addedPoints = document.getElementById("points")
+let hardPoints = "213"
 
-function addPoints(){
-    hardPoints += 5
-    pointDisplay = `${hardPoints}`
+export default hardPoints
+// export let addedPoints = document.getElementById("points")
+
+// function addPoints(){
+//     hardPoints += 5
+//     pointDisplay = `${hardPoints}`
 
 
-}
+// }
 
 
 
@@ -34,4 +36,4 @@ function addPoints(){
 //     addedPoints.innerHTML = thePoints
         
 // }
-export default addPoints
+// export default addPoints
