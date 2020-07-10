@@ -14,6 +14,11 @@
     animation-duration: 6s;
 }
 
+body {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 /* logo on main */
 .logo{
     width: 95%;
@@ -158,10 +163,12 @@ select {
 .action-header {
     text-align: center;
     padding: 7px;
+    
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.205);
 } 
 .action-list {
     margin: 10px auto;
+    width: 90%;
     padding: 10px 10px;
     text-decoration: underline;
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.205);
@@ -258,7 +265,7 @@ select {
     background-color:rgb(0,0,0,0.7);
     animation-name:open;
     animation-duration: 1s;
-    z-index:-10000;
+    z-index:-2;
 }
 
 #header {
@@ -285,7 +292,8 @@ ul {
     padding:10px;
     border:none;
     transition:0.3s;
-    margin-left:-30px;
+    margin-left:10px;
+    z-index:1;
 }
 
 button:hover {
@@ -319,6 +327,7 @@ button:hover {
     margin-top:0px;
     border-radius:5px;
     padding:0 20px;
+    z-index:0;
 }
 
 .next-button {
@@ -328,6 +337,11 @@ button:hover {
     border:none;
     text-align:left;
     transition:0.3s;
+}
+
+#backButton {
+    position:absolute;
+    bottom:2px;
 }
 
 #_vit {

@@ -20,6 +20,9 @@
             <button id='boe' class="positionButton">Board of Education</button></li>
         </div>
     </div>
+    <div id="for-links" display="none">
+        <div id="link-container" class="position"></div>
+    </div>
     <div id="info"></div>
         <!-- VOTER INFORMATION TOOL -->
 <script type="text/javascript" src="https://tool.votinginfoproject.org/app.js"></script>
@@ -38,6 +41,16 @@
     },
     language: 'en',
 });</script>
+<div class="iframe-container">
+<iframe id="iframe" class="iframe" src="https://docs.google.com/forms/d/e/1FAIpQLSfl6rNcx0rAqhJnHQgewFRDDUjhXDdoDHkbB2ErKZZdLN4ZUw/viewform?embedded=true" width="640" height="6456" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+</div>
+    <script>
+        iframe.addEventListener("click",()=>{
+        window.setTimeout(function () {
+        let iframe = document.getElementById('iframe');
+    }, 5000); 
+})
+    </script>
     <script src="modules/main.js" type="module"></script>
     <script src="intro.js-2.9.3/minified/intro.min.js"></script>
 </body>

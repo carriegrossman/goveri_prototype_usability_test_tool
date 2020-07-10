@@ -6,6 +6,7 @@ import survey from "./survey.js"
 //import signup form here
 geocode()
 
+
 let logo = document.createElement("img");
 logo.src = "./modules/img/goveri_logo.png";
 logo.setAttribute("class", "logo")
@@ -14,11 +15,13 @@ root.append(logo);
 login()
 
 loginButton.addEventListener("click",()=>{
-   login()
+    login()
     signUpButton.remove()
     loginButton.remove()
     logo.remove()
 })
+
+
 
 signUpButton.addEventListener("click",()=>{
     signUpForm()

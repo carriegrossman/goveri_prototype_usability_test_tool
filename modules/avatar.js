@@ -1,9 +1,13 @@
 import {firstName, lastName} from "./signupform.js"
-import hardPoints from "./points.js"
+import {hardPoints} from "./points.js"
 import zip from "./zipcode.js"
 
 let city
 let state
+
+export let pointTally =  document.createElement("div");
+export let pointAndName = document.createElement("div");
+export let usersName =  document.createElement("div");
 
 let avatarHtml = () => {
     // <div> "root"
@@ -85,17 +89,17 @@ let avatarHtml = () => {
     avaPn.setAttribute("data-step","3")
     mDiv.appendChild(avaPn);
     //
-    let pointAndName = document.createElement("div");
+    
     pointAndName.className = "point-name"
     avaPn.appendChild(pointAndName);
     //
-    let pointTally =  document.createElement("div");
+    
     pointTally.setAttribute("id","points");
     pointTally.className = "points"
-    pointTally.textContent = `${hardPoints} points`
+    pointTally.innerText = `${hardPoints} points`
     pointAndName.appendChild(pointTally);
     //
-    let usersName =  document.createElement("div");
+    
     usersName.setAttribute("id","users-name");
     usersName.className = "users-name"
     usersName.innerHTML = `${firstName.value} ${lastName.value}`
