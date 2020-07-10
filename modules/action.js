@@ -1,6 +1,6 @@
 import {actionListItem1, actionListItem2, actionListItem3, actionListIcon1, actionListIcon2, actionListIcon3, actionPointsValue1, actionPointsValue2, actionPointsValue3} from "./loadActionList.js"
 import link from "./link.js";
-import addPoints,{addedPoints, hardPoints} from "./points.js"
+import addPoints,{hardPoints} from "./points.js"
 
 export default () => {
     // Unordered List
@@ -24,6 +24,7 @@ export default () => {
 
     let actionIcons = [actionListIcon1,actionListIcon2,actionListIcon3]
     let actionPoints = [actionPointsValue1,actionPointsValue2,actionPointsValue3]
+    // let actionUrl = [actionListUrl2,actionListUrl3]
     let idx = 0
     let listArray = [actionListItem1,actionListItem2,actionListItem3]
     //next make one for the URLs of each
@@ -41,7 +42,7 @@ export default () => {
             idx = event.target.id
             addPoints(actionPoints[idx])
             //first, would be to open the link in a new tab
-            //container that would open the url in the link div
+            //container that would open the url in the link div\
             //use the item's url in actionListItemsArray.js as what displays in link.js
         })
 
