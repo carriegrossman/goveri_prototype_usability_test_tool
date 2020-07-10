@@ -1,7 +1,16 @@
 import edu from "./edu_modules/edu_main.js"
 
+export let iaDiv = document.createElement("div");
+
 let iconLinks = () => {
-    let rDiv = document.getElementById("root")
+let rDiv = document.getElementById("root")
+    // Second Icon "First"
+    
+    iaDiv.setAttribute("id","icons");
+    iaDiv.className = "icons";
+    rDiv.appendChild(iaDiv);
+
+    
     let iDiv = document.getElementById("icons");
     iDiv.className = "icons";
     rDiv.appendChild(iDiv);
@@ -32,7 +41,15 @@ let iconLinks = () => {
     thirdIcon.setAttribute("data-step","7");
     iDiv.appendChild(thirdIcon);
     //
-    
+    //
+    var secondIcon = document.createElement("img");
+    secondIcon.setAttribute("draggable","false");
+    secondIcon.className = "second-icon";
+    secondIcon.setAttribute("src","modules/img/secondicon.png");
+    secondIcon.setAttribute("data-intro","First icon"); // ---- INTRO STEP 5
+    secondIcon.setAttribute("data-step","5");
+    // secondIcon.setAttribute("onclick","actionLink()");
+    iaDiv.appendChild(secondIcon);
 };
 
 export default iconLinks

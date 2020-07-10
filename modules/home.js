@@ -1,6 +1,8 @@
 import zipcode from "./zipcode.js"
 import avatarHtml,{receive} from "./avatar.js"
 import action,{actionLink} from "./action.js"
+import loadActionList from "./loadActionList.js"
+
 import iconLinks from "./icons.js"
 import actionListItems,{actionListItemsArray} from "./actionListItemsArray.js";
 // import actionList from "./action.js"
@@ -10,6 +12,7 @@ function home(){
     avatarHtml()
     // actionListItems()
     // actionListItemsArray()
+    
     action()
     iconLinks()
     introJs().start();
