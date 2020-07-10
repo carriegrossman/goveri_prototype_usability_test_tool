@@ -1,7 +1,7 @@
 import actionListItemsArray from "./actionListItemsArray.js"
 import { pointTally, pointAndName, usersName } from "./avatar.js"
 
-let hardPoints = "213"
+export let hardPoints = "213"
 
 function addPoints(points){
     hardPoints += (Number.parseInt(points))
@@ -14,7 +14,7 @@ function addPoints(points){
 
 
 
-
+export default addPoints
 
 
 //     let thePoints = 0

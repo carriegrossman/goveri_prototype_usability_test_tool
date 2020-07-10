@@ -1,6 +1,6 @@
 import {actionListItem1, actionListItem2, actionListItem3, actionListIcon1, actionListIcon2, actionListIcon3, actionPointsValue1, actionPointsValue2, actionPointsValue3} from "./loadActionList.js"
 import link from "./link.js";
-import addPoints,{addedPoints, hardPoints} from "./points.js"
+import addPoints,{hardPoints} from "./points.js"
 
 export default () => {
     // Unordered List
