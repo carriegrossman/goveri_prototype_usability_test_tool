@@ -19,7 +19,6 @@ body {
     flex-wrap: wrap;
 }
 
-
 /* logo on main */
 .logo{
     width: 95%;
@@ -164,10 +163,12 @@ select {
 .action-header {
     text-align: center;
     padding: 7px;
+    
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.205);
 } 
 .action-list {
     margin: 10px auto;
+    width: 90%;
     padding: 10px 10px;
     text-decoration: underline;
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.205);
