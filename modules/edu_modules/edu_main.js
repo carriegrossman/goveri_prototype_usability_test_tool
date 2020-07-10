@@ -1,9 +1,10 @@
-import edu_funcs,{goveriPointsDisplay} from "./edu_funcs.js"
+import edu_funcs,{goveriPointsDisplay, goveriPoints} from "./edu_funcs.js"
 import {positions} from "./edu_data.js"
+import { hardPoints } from "../points.js"
 // import edu_evtListener from "./edu_evtListener.js"
 
 export let eduDiv = document.createElement("div")
-let backButton = document.createElement("button")
+
 
 export let innerBackground = document.createElement("div")
 innerBackground.setAttribute("id","inner-background")
@@ -57,18 +58,21 @@ export let infoDiv = document.getElementById("info")
 
 innerBackground.append(eduHeaderDiv,positionsContainer,infoDiv)
 eduDiv.append(innerBackground)
+let backButton = document.createElement("button")
+backButton.setAttribute("id","backButton")
+edu_funcs()
 
 export default () => {
     
     eduDiv.className = "link"
     
-    edu_funcs()
     
-
+    
+    eduDiv.append(backButton)
     backButton.innerText = "Back"
     backButton.addEventListener("click",() => {
         eduDiv.remove()
     })
-    eduDiv.append(backButton)
+    
     root.append(eduDiv)
 }

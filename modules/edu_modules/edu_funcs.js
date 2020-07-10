@@ -5,6 +5,7 @@
 
 import {eduDiv,infoDiv} from "./edu_main.js"
 import {positions} from "./edu_data.js"
+import addPoints, { hardPoints } from "../points.js"
 
 let j = 0
     let counter = 0
@@ -65,6 +66,7 @@ export default () => {
     let addScore = () => {
         positions[j].points += 5
         goveriPoints += 5
+        addPoints(5)
         console.log(goveriPoints)
         let vit = document.getElementById("_vit")
         if(goveriPoints >= 150){
