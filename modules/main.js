@@ -14,7 +14,7 @@ root.append(logo);
 login()
 
 loginButton.addEventListener("click",()=>{
-   login()
+    login()
     signUpButton.remove()
     loginButton.remove()
     logo.remove()
