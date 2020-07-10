@@ -24,6 +24,7 @@ export default () => {
 
     let actionIcons = [actionListIcon1,actionListIcon2,actionListIcon3]
     let actionPoints = [actionPointsValue1,actionPointsValue2,actionPointsValue3]
+    // let actionUrl = [actionListUrl2,actionListUrl3]
     let idx = 0
     let listArray = [actionListItem1,actionListItem2,actionListItem3]
     //next make one for the URLs of each
@@ -38,6 +39,8 @@ export default () => {
             //open link.js module (which has a "back" button that closes the link.js module and adds to the points)
             link()
             // addPoints()
+            //first, would be to open the link in a new tab [x]
+            //container that would open the url in the link div [x]
             //use the item's url in actionListItemsArray.js as what displays in link.js
         })
 
