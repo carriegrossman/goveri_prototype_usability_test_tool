@@ -1,6 +1,6 @@
 import {actionListItem1, actionListItem2, actionListItem3, actionListIcon1, actionListIcon2, actionListIcon3, actionPointsValue1, actionPointsValue2, actionPointsValue3} from "./loadActionList.js"
 import link from "./link.js";
-// import addPoints,{addedPoints} from "./points.js"
+import addPoints,{addedPoints, hardPoints} from "./points.js"
 
 export default () => {
     // Unordered List
@@ -35,12 +35,14 @@ export default () => {
         icon.setAttribute("src",actionIcons[idx])
         let item = document.createElement("button");
         item.textContent = example;
+        item.setAttribute("id",idx)
         item.addEventListener('click',() => {
             //open link.js module (which has a "back" button that closes the link.js module and adds to the points)
             link()
-            // addPoints()
-            //first, would be to open the link in a new tab [x]
-            //container that would open the url in the link div [x]
+            idx = event.target.id
+            addPoints(actionPoints[idx])
+            //first, would be to open the link in a new tab
+            //container that would open the url in the link div\
             //use the item's url in actionListItemsArray.js as what displays in link.js
         })
 

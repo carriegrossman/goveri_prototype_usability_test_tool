@@ -55,7 +55,7 @@ export let actionListItemsArray = () => ({
         {
             "icon" : "modules/img/thirdicon.png",
             "item" : `Educate yourself about local politics by clicking the apple icon below!`,
-            "points" : 150
+            "points" : 5
         },
         
     ]
