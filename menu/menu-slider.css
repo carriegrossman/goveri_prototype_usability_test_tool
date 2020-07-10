@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+#sidebar {
+    position: absolute;
+    width: 300px;
+    height: 100%;
+    background: #000;
+    left: -300px;
+    transition: .4s;
+}
+
+#sidebar.active {
+    left: 0;
+}
+
+.btn-group.hidebtn {
+    visibility: hidden;
+}
+
+#sidebar ul li {
+    list-style: none;
+    color: #fff;
+    font-size: 20px;
+    padding: 20px 24px;
+}
+
+#sidebar .toggle-btn {
+    position: absolute;
+    top: 30px;
+    left: 330px;
+}
+
+.toggle-btn span {
+    width: 45px;
+    height: 4px;
+    background: gray;
+    display: block;
+    margin-top: 4px;
+}
+
+.venmo-item {
+    cursor: pointer;
+}
+.venmo-item:visited {
+    text-decoration: none;
+}
+
+.cash-item {
+    cursor: pointer;
+}
+.cash-item:visited {
+    text-decoration: none;
+}
