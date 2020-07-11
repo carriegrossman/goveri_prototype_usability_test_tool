@@ -44,15 +44,48 @@ export default () => {
     nList1.setAttribute("onclick",'window.open("https://venmo.com/blmroc")');
     nUlist.appendChild(nList1);
     let nList2 = document.createElement("li");
-    nList2.innerText = "Raffle";
+    nList2.setAttribute("id","contact-bar")
+    nList2.innerText = "Contact";
     nUlist.appendChild(nList2);
     let nList3 = document.createElement("li");
-    nList3.innerText = "Contact";
+    nList3.setAttribute("id","raffle-bar")
+    nList3.innerText = "Raffle";
     nUlist.appendChild(nList3);
     //
-    // function show() {
-    //     nDiv.classList.toggle("active");
-    // };
+    let nListRaffle3 = document.createElement("p");
+    nListRaffle3.setAttribute("id","raffle-nc");
+    nListRaffle3.className = "raffle-nc";
+    nUlist.appendChild(nListRaffle3);
+    //
+    let raffleName = document.createElement("p");
+    raffleName.setAttribute("id","raffle-name");
+    raffleName.innerText = "Next raffle: "
+    nListRaffle3.appendChild(raffleName);
+    //
+    let timeRaffle = document.createElement("p");
+    timeRaffle.setAttribute("id","demo");
+    nListRaffle3.appendChild(timeRaffle);
+    //
+    let countDownDate = new Date("July 13, 2020 16:00:00").getTime();
+    let x = setInterval(function() {
+    let now = new Date().getTime();
+    //
+    let distance = countDownDate - now;
+    //
+    let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    //
+    document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+    + minutes + "m " + seconds + "s ";
+    //
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "Raffle ended!";
+        }
+    }, 1000);
+    //
     document.getElementById("toggle-btn").addEventListener("click", function(){
         document.getElementById("sidebar").classList.toggle("active");
     })
@@ -60,4 +93,8 @@ export default () => {
     ncDiv.addEventListener("click", function(){
         nUlist.classList.toggle("visible");
     })
+    nList3.addEventListener("click", function(){
+        nListRaffle3.classList.toggle("time-visble");
+    })
+    
 }
