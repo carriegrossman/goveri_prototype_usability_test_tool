@@ -11,6 +11,7 @@ backButton.className = "link-home"
 backButton.innerHTML = "Back"
 backButton.addEventListener("click",() => {
     link.remove()
+    loadActionList()
 })
 
 export let innerBackground = document.createElement("div")
@@ -28,9 +29,10 @@ export default () => {
     // link.setAttribute("target","_self")
     
     openurl()
+    
 
     link.append(backButton)
     root.append(link)
-    action()
+    // loadActionList()
     // quizzes()
 }

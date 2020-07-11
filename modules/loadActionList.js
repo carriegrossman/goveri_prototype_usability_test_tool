@@ -1,6 +1,8 @@
 import {dropdown1,dropdown2} from "./survey.js"
 import actionListItems,{actionListItemsArray} from "./actionListItemsArray.js"
-import {whichClicked} from "./action.js"
+import iconLinks, {iaDiv,iDiv} from "./icons.js"
+import addPoints,{hardPoints} from "./points.js"
+import link from "./link.js"
 
 export let actionListItem1 = ""
 export let actionListItem2 = ""
@@ -109,7 +111,117 @@ let loadActionList = () => {
         default:
             actionListItem3 = "Take action by selecting a cause you care about in the menu at the top"
         }
+    
+    //Creating the action list divs
+    let ulDiv = document.createElement("div");
+    ulDiv.setAttribute("id","ulist");
+    ulDiv.setAttribute("data-intro","This is the Action List. Your top 3 topics."); // ---- INTRO STEP 4
+    ulDiv.setAttribute("data-step","4");
+    
+    let uList = document.createElement("ul");
+    uList.setAttribute("id","action-list")
+    uList.className = "action-list";
+
+    let li = document.createElement("li")
+
+    let liDiv = document.createElement("div")
+    liDiv.className = "listed-action";
+
+    
+    
+    let actionListItemsHolder = [actionListItem1,actionListItem2,actionListItem3]
+    let actionListIcons = [actionListIcon1,actionListIcon2,actionListIcon3]
+    let actionPointsValues = [actionPointsValue1,actionPointsValue2,actionPointsValue3]
+    //Pulling the right info from actionListItemsArray.js
+    
+    for(let i = 0; i < 3; i++){
         
+        //i keeps track of the order of the items
+        let icon = document.createElement("img")
+        icon.setAttribute("src", actionListIcons[i])
+        icon.className = "cause-icon"
+        let item = document.createElement("button")
+        item.className = "action-button"
+        item.innerText = actionListItemsHolder[i]
+        console.log(actionListItemsHolder[0])
+        let points = document.createElement("p")
+        points.className = "points-container"
+        points.innerText = `+ ${actionPointsValues[i]}`
+        liDiv.append(icon,points,item)
+        liDiv.setAttribute("id",i)
+        let liId = liDiv.id
+        console.log(liDiv.id)
+        // ulDiv.append(liDiv)
+        
+        item.addEventListener("click", event => {
+            
+            console.log(liId)
+            if(liId == 0){
+                electionCounter++
+            }
+            if(liId == 1 && actionListIcon2 == "modules/img/secondicon.png"){
+                blmCounter++
+            }
+            if(liId == 1 && actionListIcon2 == "modules/img/tree_icon.png"){
+                envCounter++
+            }
+            if(liId == 2 && actionListIcon3 == "modules/img/secondicon.png"){
+                blmCounter++
+            }
+            if(liId == 2 && actionListIcon3 == "modules/img/tree_icon.png"){
+                envCounter++
+            }
+            link()
+            ulDiv.remove()
+            addPoints(actionPointsValues[i])
+            console.log("**************************************************************")
+            console.log(`blmCounter : ${blmCounter},envCounter : ${envCounter},electionCounter : ${electionCounter},`)
+            console.log("**************************************************************")
+        })
+        li.append(liDiv);
+        uList.append(li)
+        ulDiv.append(uList)
+        root.insertBefore(ulDiv,iDiv);
+        
+    }
+
+    
+    
+    
+    // let counter = 0
+    
+    
+    
+        
+
+    // let whichClicked = event.target.id
+    // if(whichClicked==0 || whichClicked == null){
+    //     addToElectionCounter()
+    // }
+    
+    // console.log(`Which clicked is: ${whichClicked}`)
+    // if(whichClicked==1){
+    //     addToBlmCounter()
+    // }
+    // if(whichClicked==2){
+    //     addToEnvCounter()
+    // }
+    // counter++
+    // console.log(counter)
+    // if(counter>0){
+    //     addToBlmCounter()
+    // }
+    // if(counter>4){
+    //     addToEnvCounter()
+    // }
+    let idx = 0
+        
+        
+    
+    // root.appendChild(iaDiv)
+    idx++
+    
+    console.log(idx)
         console.log(`blmCounter : ${blmCounter},envCounter : ${envCounter},electionCounter : ${electionCounter},`)
 }
 

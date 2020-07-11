@@ -148,15 +148,56 @@ select {
     padding: 7px;
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.205);
 } 
-.action-list {
+#action-list {
     margin: 10px auto;
     padding: 10px 10px;
-    text-decoration: underline;
-    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.205);
-
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.205);;
+    height:250px;
+    max-height:250px;
+    overflow: scroll;
 }
+
+#action-list li {
+}
+
+#ulDiv{
+    display: flex;
+    flex-direction: column;
+    height:250px;
+    max-height:250px;
+}
+
 .listed-action{
-    margin: 15px 0;
+    margin: 10px 0 -20px 5px;
+    display:flex;
+    flex-direction:column;
+    width:95%;
+}
+
+.listed-action img {
+    max-height:20px;
+    max-width:20px;
+}
+
+.action-button {
+    transform: translateY(-45px);
+    margin-bottom:-30px;
+}
+
+.cause-icon {
+    transform: translate(-10px,10px);
+    z-index: 1;
+}
+
+.points-container {
+    position:relative;
+    right:0;
+    top:0;
+    width:40%;
+    
+    padding:0 5px;
+    transform:translate(10px,-25px);
+    font-weight:bold;
 }
 
 
@@ -171,19 +212,10 @@ select {
     justify-content: space-between;
 }
 
-select {
+/* select {
     display:block;
     margin:10px;
-}
-
-.listed-action {
-    display:flex;
-}
-
-.listed-action img {
-    max-height:20px;
-    max-width:20px;
-}
+} */
 
 @keyframes goveriLogo {
     0% {

@@ -1,6 +1,7 @@
 import edu from "./edu_modules/edu_main.js"
 
 export let iaDiv = document.createElement("div");
+export let iDiv = document.getElementById("icons");
 
 let iconLinks = () => {
 let rDiv = document.getElementById("root")
@@ -11,7 +12,7 @@ let rDiv = document.getElementById("root")
     rDiv.appendChild(iaDiv);
 
     
-    let iDiv = document.getElementById("icons");
+    iDiv = document.getElementById("icons");
     iDiv.className = "icons";
     rDiv.appendChild(iDiv);
     //

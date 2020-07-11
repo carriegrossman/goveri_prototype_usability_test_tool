@@ -12,8 +12,8 @@ function home(){
     avatarHtml()
     // actionListItems()
     // actionListItemsArray()
-    
     action()
+    loadActionList()
     iconLinks()
     introJs().start();
 };
