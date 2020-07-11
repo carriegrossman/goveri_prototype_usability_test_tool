@@ -3,6 +3,7 @@ import actionListItems,{actionListItemsArray} from "./actionListItemsArray.js"
 import iconLinks, {iaDiv,iDiv} from "./icons.js"
 import addPoints,{hardPoints} from "./points.js"
 import link from "./link.js"
+import edu from "./edu_modules/edu_main.js"
 
 export let actionListItem1 = ""
 export let actionListItem2 = ""
@@ -23,6 +24,8 @@ export let actionPointsValue3
 export let blmCounter = 0
 export let envCounter = 0
 export let electionCounter = 0
+
+export let hyperlink = ""
 
 export let addToElectionCounter = () => {
     electionCounter++
@@ -133,7 +136,6 @@ let loadActionList = () => {
     let actionListIcons = [actionListIcon1,actionListIcon2,actionListIcon3]
     let actionPointsValues = [actionPointsValue1,actionPointsValue2,actionPointsValue3]
     //Pulling the right info from actionListItemsArray.js
-    
     for(let i = 0; i < 3; i++){
         
         //i keeps track of the order of the items
@@ -157,21 +159,33 @@ let loadActionList = () => {
             
             console.log(liId)
             if(liId == 0){
+                hyperlink = actions.election[electionCounter].url
                 electionCounter++
             }
             if(liId == 1 && actionListIcon2 == "modules/img/secondicon.png"){
+                hyperlink = actions.blm[blmCounter].url
                 blmCounter++
             }
             if(liId == 1 && actionListIcon2 == "modules/img/tree_icon.png"){
+                hyperlink = actions.environment[envCounter].url
                 envCounter++
             }
             if(liId == 2 && actionListIcon3 == "modules/img/secondicon.png"){
+                hyperlink = actions.blm[blmCounter].url
                 blmCounter++
             }
             if(liId == 2 && actionListIcon3 == "modules/img/tree_icon.png"){
+                hyperlink = actions.environment[envCounter].url
                 envCounter++
             }
-            link()
+            if(liId == 0){
+                link()
+                edu()
+            }
+            if(liId > 0){
+                link()
+            }
+            
             ulDiv.remove()
             addPoints(actionPointsValues[i])
             console.log("**************************************************************")

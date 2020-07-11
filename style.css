@@ -36,6 +36,15 @@ input[class="signupInput"]{
     box-sizing: border-box;
 }
 
+.signUpButton{
+    width: 50%;
+    padding: 12px 20px;
+    margin: 100px 0px 0px 75px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
 
 input[id=email]{
     width: 100%;
@@ -389,4 +398,72 @@ button:hover {
     animation-name:fadeIn;
     animation-duration: 0.5s;
     z-index:9999;
+}
+
+.link-header {
+    color:white;
+    text-align: center;
+    margin-top: 75px;
+}
+
+.linkImgDiv {
+    width:200px;
+    height:200px;
+    background:#eee;
+    margin:auto;
+}
+
+.action-stream-header {
+    color:white;
+    text-align: center;
+}
+
+.action-stream-container {
+    height:100%;
+    max-height:100%;
+    width:100%;
+    margin:0px;
+    overflow:scroll;
+    background:rgb(255,255,255)
+}
+
+.action-stream-item-div {
+    height:225px;
+    width:225px;
+    margin:0;
+    border:1px solid #ddd;
+    padding:25px;
+}
+
+.stream-button{
+    width: 200px;
+    padding: 12px 20px;
+    margin: 25px auto;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.action-stream-img-div {
+    width:100%;
+    height:200px;
+    background:#eee;
+    margin:auto;
+}
+
+.stream-item-icons-div {
+    margin:5px 12px;
+    display:flex;
+    justify-content: flex-start;
+}
+
+.stream-icon {
+    max-width:20px;
+    max-height:20px;
+    margin:0 5px;
+}
+
+#comment-icon {
+    transform: translateY(2px);
 }
