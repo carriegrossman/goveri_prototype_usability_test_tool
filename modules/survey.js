@@ -64,7 +64,7 @@ let survey = () => {
         // event.preventDefault()
         form.remove()
         submitButton.remove()
-        loadActionList()
+        
         home()
     })
 }

@@ -30,6 +30,11 @@ export let actionListItemsArray = () => ({
             "item" : `Support black-owned businesses by downloading this app: https://www.supportblackowned.com/`,
             "url" : ``,
             "points" : 200
+        },
+        {
+            "icon" : "modules/img/secondicon.png",
+            "item" : `You're all caught up in this category!`,
+            "points" : 0
         }
     ],
     "environment":[
@@ -49,6 +54,11 @@ export let actionListItemsArray = () => ({
             "icon" : "modules/img/tree_icon.png",
             "item" : `Purchase a reusable item`,
             "points" : 50
+        },
+        {
+            "icon" : "modules/img/tree_icon.png",
+            "item" : `You're all caught up in this category!`,
+            "points" : 0
         }
     ],
     "election":[
@@ -57,6 +67,21 @@ export let actionListItemsArray = () => ({
             "item" : `Educate yourself about local politics by clicking the apple icon below!`,
             "points" : 5
         },
+        {
+            "icon" : "modules/img/thirdicon.png",
+            "item" : `Educate yourself about your state's mail-in ballot process!`,
+            "points" : 5
+        },
+        {
+            "icon" : "modules/img/thirdicon.png",
+            "item" : `Educate yourself about local politics!`,
+            "points" : 5
+        },
+        {
+            "icon" : "modules/img/thirdicon.png",
+            "item" : `You're all caught up in this category!`,
+            "points" : 0
+        }
         
     ]
 })
