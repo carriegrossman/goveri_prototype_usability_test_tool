@@ -12,6 +12,9 @@
     max-height:500px;
     animation-name:fadeOut;
     animation-duration: 6s;
+    overflow: hidden;
+    display: absolute;
+
 }
 
 /* logo on main */
@@ -357,4 +360,93 @@ button:hover {
     animation-name:fadeIn;
     animation-duration: 0.5s;
     z-index:9999;
+}
+
+/* menu slider */
+/* .x-menu{
+    margin: 0;
+    padding: 0;
+} */
+#sidebar {
+    position: absolute;
+    width: 150px;
+    /* height: 100%; */
+    /* background: rgba(0, 0, 0, 0.377); */
+    right: -300px;
+    transition: .2s;
+    margin-right: 730px;
+    top: 10px;
+    background: rgba(0, 0, 255, 0);
+
+}
+
+#sidebar.active {
+    right: -175px;
+    transition: .2s;
+}
+
+
+#sidebar ul li {
+    list-style: none;
+    color: #fff;
+    font-size: 20px;
+    padding: 15px 10px;
+    background: #5c5c5c7c;
+    border: 1px solid rgba(255, 255, 255, 0.651);
+    /* visibility: hidden; */
+    /* border-radius: 50px */
+}
+.ul-list {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s linear 75ms, opacity 75ms;
+}
+
+.ul-list.visible {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s linear 0s, opacity 300ms;
+}
+
+
+#sidebar .toggle-btn {
+    position: absolute;
+    top: 15px;
+    right: 130px;
+}
+
+/* .navspan1 {
+    background: rgb(224, 29, 29);
+    border: 0.5px solid black;
+}
+.navspan2 {
+    background: white;
+    border: 0.5px solid black;
+}
+.navspan3 {
+    background: rgb(35, 35, 247);
+    border: 0.5px solid black;
+} */
+
+
+.toggle-btn span {
+    width: 32px;
+    height: 4px;
+    background: linear-gradient(45deg,red,white,white,blue);
+    border: 1px solid rgba(0, 0, 0, 0.493);
+    display: block;
+    margin-top: 2px;
+}
+
+#support-bar {
+    cursor: pointer;
+}
+#support-bar:hover {
+    color: rgba(0, 0, 0, 0);
+    background: url("./modules/img/venmo-icon.svg") no-repeat;
+    background-color: rgb(51, 150, 205);
+}
+
+#support-bar:visited {
+    text-decoration: none;
 }
