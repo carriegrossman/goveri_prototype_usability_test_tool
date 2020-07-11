@@ -14,19 +14,11 @@ let avatarHtml = () => {
     let rDiv = document.getElementById("root");
     //
     // Menu bar
-    let nDiv = document.createElement("nav");
-    nDiv.setAttribute("id","menu");
-    nDiv.className = "menu";
-    rDiv.appendChild(nDiv);
+    // let nNav = document.createElement("nav");
+    // nNav.setAttribute("id","ex-menu");
+    // nNav.className = "s-menu";
+    // rDiv.appendChild(nNav);
     //
-    let anDiv = document.createElement("a");
-    anDiv.className = "menu-icon"
-    anDiv.setAttribute("href","#");
-    // anDiv.setAttribute("target","_blank")
-    anDiv.innerHTML = "☰"
-    // anDiv.setAttribute("data-intro","Menu bar. Work in progress."); // ---- INTRO STEP 8
-    // anDiv.setAttribute("data-step","8");
-    nDiv.appendChild(anDiv);
     // <div> "main"
     let mDiv = document.createElement("div");
     mDiv.setAttribute("id","main");
