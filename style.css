@@ -130,6 +130,7 @@ select {
     margin-left: 3px;
 }
 .ava-img {
+    cursor: pointer;
     -moz-border-radius: 50px;
     border: 4px double rgba(87, 81, 81, 0.226);
     border-radius: 50px;
@@ -169,8 +170,8 @@ select {
     overflow: scroll;
 }
 
-#action-list li {
-}
+/* #action-list li {
+} */
 
 #ulDiv{
     display: flex;
@@ -431,14 +432,14 @@ button:hover {
     /* background: rgba(0, 0, 0, 0.377); */
     right: -570px;
     transition: .2s;
-    margin-right: 730px;
+    margin-right: 1000px;
     top: 10px;
     background: rgba(0, 0, 255, 0);
 
 }
 
 #sidebar.active {
-    right: -590px;
+    right: -444px;
     transition: .2s;
 }
 

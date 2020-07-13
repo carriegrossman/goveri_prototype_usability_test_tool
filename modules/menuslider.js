@@ -10,8 +10,8 @@ export default () => {
     let ncDiv = document.createElement("div");
     ncDiv.setAttribute("id","toggle-btn");
     ncDiv.className = "toggle-btn";
-    ncDiv.setAttribute("data-intro","Menu slider"); // ---- INTRO STEP 8
-    ncDiv.setAttribute("data-step","8");
+    ncDiv.setAttribute("data-intro","Here in this menu-slider, you can click on the icons to support through Venmo, Contact, and participate in the next raffle by using your points!"); // ---- INTRO STEP 11
+    ncDiv.setAttribute("data-step","11");
     // ncDiv.setAttribute("onclick","show()")
     ncDiv.setAttribute("type","module");
     nDiv.appendChild(ncDiv);
