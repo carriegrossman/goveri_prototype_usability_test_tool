@@ -55,7 +55,7 @@ let rDiv = document.getElementById("root")
     // secondIcon.setAttribute("onclick","actionLink()");
     iaDiv.appendChild(secondIcon);
     let googleForm = document.getElementById("googleForm")
-    googleForm.setAttribute("data-intro","This is how you make an impact right now! Your answers to this form are incredibly important, and will inform the design of the final product of this app! Please click 'Done' and begin using the app. After a few minutes, please complete this form. Leave your email if you would like updates on the development of the app!"); // ---- INTRO STEP 11
+    googleForm.setAttribute("data-intro","Completing this form is how you can make an impact right now! Your answers are incredibly important to us, as they help us design the app in a way that works best for you. Please click 'Done' and begin using the app. After a few minutes, please complete this form. Thank you again for helping us build Goveri!"); // ---- INTRO STEP 11
     secondIcon.setAttribute("data-step","9");
 };
 
