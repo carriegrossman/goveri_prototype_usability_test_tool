@@ -61,7 +61,7 @@ export default () => {
     //
     let raffleName = document.createElement("p");
     raffleName.setAttribute("id","raffle-name");
-    raffleName.innerText = "Next raffle: "
+    // raffleName.innerText = "Next raffle: "
     nListRaffle3.appendChild(raffleName);
     //
     let timeRaffle = document.createElement("p");

@@ -439,7 +439,7 @@ button:hover {
 }
 
 #sidebar.active {
-    right: -444px;
+    right: -570px;
     transition: .2s;
 }
 
@@ -546,7 +546,6 @@ button:hover {
     opacity: 1;
     transition: visibility 0s linear 0s, opacity 300ms;
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.205);
-
     /* border-radius: 20px; */
 }
 
