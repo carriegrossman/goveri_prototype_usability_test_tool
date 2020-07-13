@@ -20,6 +20,7 @@
 /* logo on main */
 .logo{
     width: 95%;
+    margin-top:50px;
     padding-top: 50px;
     padding-bottom: 50px;
 }
@@ -72,7 +73,7 @@ input[id=email]{
 select {
     width: 100%;
     padding: 12px 20px;
-    margin: 8px 0px 8px -10px;
+    margin: 8px 0px 8px 0px;
     display: block;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -233,6 +234,7 @@ select {
 .second-icon,
 .third-icon {
     width: 25px;
+    height:25px;
     padding: 5px;
     cursor: pointer;
     display: inline-flex;
@@ -402,7 +404,7 @@ button:hover {
     top:0px;
     left:0;
     right:0;
-    background: linear-gradient(45deg,red,white,white,blue);
+    background: blue;
     width:100%;
     max-width:277px;
     margin:10px auto;
@@ -640,4 +642,9 @@ button:hover {
 
 #comment-icon {
     transform: translateY(2px);
+}
+
+#google-form-container {
+    display:flex;
+    justify-content: center;
 }
