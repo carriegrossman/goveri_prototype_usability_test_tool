@@ -1,7 +1,6 @@
-import action from "./action.js"
 import loadActionList from "./loadActionList.js"
 
-export let actionStream = document.createElement("div")
+export let protestStream = document.createElement("div")
 let h3 = document.createElement("h3")
 h3.className = "action-stream-header"
 
@@ -15,39 +14,36 @@ innerBackground.append(h3,innerDiv)
 
 let backButton = document.createElement("button")
 backButton.className = "link-home"
-backButton.setAttribute("id","backButton")
 backButton.innerHTML = "Back"
+backButton.setAttribute("id","backButton")
 backButton.addEventListener("click",() => {
-    actionStream.remove()
+    protestStream.remove()
     // loadActionList()
 })
 
 export default () => {
     
-    actionStream.className = "link"
-    actionStream.setAttribute("id","actionStream")
+    protestStream.className = "link"
+    protestStream.setAttribute("id","protestStream")
     // link.setAttribute("target","_self")
 
-    h3.innerText = "Action Stream™!"
+    h3.innerText = "Protests Near You"
 
     for(let i = 0;i<5;i++){
-        let actionStreamItemDiv = document.createElement("div")
-        actionStreamItemDiv.className = "action-stream-item-div"
-        actionStreamItemDiv.setAttribute("id", i)
+        let protestStreamItemDiv = document.createElement("div")
+        protestStreamItemDiv.className = "action-stream-item-div"
+        protestStreamItemDiv.setAttribute("id", i)
         
-        innerDiv.append(actionStreamItemDiv)
+        innerDiv.append(protestStreamItemDiv)
 
-        let actionStreamImg = document.createElement("div")
-        actionStreamImg.className = "linkImgDiv"
+        let protestStreamImg = document.createElement("div")
+        protestStreamImg.className = "linkImgDiv"
         
-        if(actionStreamItemDiv.id == 0){
-            actionStreamImg.innerText = "Your post"
-        }
         //ICONS
         let iconDiv = document.createElement("div")
         iconDiv.className = "stream-item-icons-div"
         let likeIcon = document.createElement("img")
-        likeIcon.setAttribute("src","modules/img/like.png")
+        likeIcon.setAttribute("src","modules/img/star.png")
         likeIcon.className = "stream-icon"
 
         let commentIcon = document.createElement("img")
@@ -57,11 +53,11 @@ export default () => {
         
         iconDiv.append(likeIcon,commentIcon)
 
-        actionStreamItemDiv.append(actionStreamImg,iconDiv)
+        protestStreamItemDiv.append(protestStreamImg,iconDiv)
     }
 
-    actionStream.append(innerBackground,backButton)
-    root.append(actionStream)
+    protestStream.append(innerBackground,backButton)
+    root.append(protestStream)
     // loadActionList()
     // quizzes()
 }

@@ -164,8 +164,8 @@ select {
     margin: 10px auto;
     padding: 10px 10px;
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.205);;
-    height:250px;
-    max-height:250px;
+    height:275px;
+    max-height:275px;
     overflow: scroll;
 }
 
@@ -175,8 +175,8 @@ select {
 #ulDiv{
     display: flex;
     flex-direction: column;
-    height:250px;
-    max-height:250px;
+    height:300px;
+    max-height:300px;
 }
 
 .listed-action{
@@ -193,7 +193,7 @@ select {
 
 .action-button {
     transform: translateY(-45px);
-    margin-bottom:-30px;
+    margin-bottom:0px;
 }
 
 .cause-icon {
@@ -214,6 +214,11 @@ select {
 
 
 /* Icons */
+.icons {
+    display:flex;
+    justify-content: space-between;
+}
+
 .first-icon,
 .second-icon,
 .third-icon {

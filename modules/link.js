@@ -44,12 +44,16 @@ export default () => {
     link.className = "link"
     link.setAttribute("id","link")
     // link.setAttribute("target","_self")
-    linkImg.innerText = "Photo you took to show you took action (e.g. receipts, voter sticker, mail-in ballot in hand, etc.)"
-    h3.innerText = "Nice! Now post your proof of action in the Action Stream™!"
-    innerBackground.append(h3,linkImg,streamButton)
+    
     
     if(hyperlink){
         openurl(hyperlink)
+        linkImg.innerText = "Upload the photo you took proving you took action (e.g. receipts, voter sticker, mail-in ballot in hand, etc.)"
+        h3.innerText = "Nice! Now post your proof of action in the Action Stream™!"
+        innerBackground.append(h3,linkImg,streamButton)
+    } else {
+        h3.innerText = "Share your progress on the Action Stream™!"
+        innerBackground.append(h3,streamButton)
     }
 
     link.append(backButton)

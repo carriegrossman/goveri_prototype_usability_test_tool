@@ -1,6 +1,5 @@
 import {firstName, lastName} from "./signupform.js"
 import {hardPoints} from "./points.js"
-import zip from "./zipcode.js"
 
 let city
 let state
@@ -12,24 +11,17 @@ export let usersName =  document.createElement("div");
 let avatarHtml = () => {
     // <div> "root"
     let rDiv = document.getElementById("root");
-    //
-    // Menu bar
-    // let nNav = document.createElement("nav");
-    // nNav.setAttribute("id","ex-menu");
-    // nNav.className = "s-menu";
-    // rDiv.appendChild(nNav);
-    //
-    // <div> "main"
+    
     let mDiv = document.createElement("div");
     mDiv.setAttribute("id","main");
     mDiv.className = "main";
-    mDiv.setAttribute("data-intro","Hello! Welcome to the home page."); // ---- INTRO STEP 1
+    mDiv.setAttribute("data-intro","Hello! Welcome to the Goveri prototype testing tool. Please follow these instructions to help us build the one-stop-shop for social and political activism!"); // ---- INTRO STEP 1
     mDiv.setAttribute("data-step","1");
     rDiv.appendChild(mDiv);
     //
     var ahDiv = document.createElement("div"); // -- <div>
     ahDiv.className = "ava-group"; // -class/CSS
-    ahDiv.setAttribute("data-intro","You can change your avatar by clicking on this icon"); // ---- INTRO STEP 2
+    ahDiv.setAttribute("data-intro","You can change your profile picture by clicking here and uploading your own photo."); // ---- INTRO STEP 2
     ahDiv.setAttribute("data-step","2");
     mDiv.appendChild(ahDiv); // <div>"main" -> <div>"ava-group"
     //
@@ -77,7 +69,7 @@ let avatarHtml = () => {
     // Points & Name
     let avaPn = document.createElement("div");
     avaPn.className = "ava-group";
-    avaPn.setAttribute("data-intro","Right here you have your points collected from the surveys and your name.") // ---- INTRO STEP 3
+    avaPn.setAttribute("data-intro","You earn points for completing actions below. For every 500 points you earn, you are entered into a raffle to win cash, which you can choose to donate to a cause or family in need!") // ---- INTRO STEP 3
     avaPn.setAttribute("data-step","3")
     mDiv.appendChild(avaPn);
     //

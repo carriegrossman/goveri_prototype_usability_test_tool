@@ -115,7 +115,7 @@ const signUpForm = () => {
         survey()
     })
 
-    
+    alert("Please provide your name and zip code for the prototype to function properly")
     // console.log('this function should load the signup form')
 }
 

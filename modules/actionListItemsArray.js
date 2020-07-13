@@ -80,7 +80,8 @@ export let actionListItemsArray = () => ({
         },
         {
             "icon" : "modules/img/thirdicon.png",
-            "item" : `Educate yourself about local politics!`,
+            "item" : `Learn more about local politics!`,
+            "url" : ``,
             "points" : 5
         },
         {
