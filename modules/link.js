@@ -1,7 +1,7 @@
 // import quizzes,{edu} from "./edu_modules/edu.js"
 import openurl from "./openurl.js"
 import home from "./home.js"
-import actionStream from "./actionstream.js"
+import actionStream from "./actionStream.js"
 import loadActionList,{hyperlink} from "./loadActionList.js"
 
 
