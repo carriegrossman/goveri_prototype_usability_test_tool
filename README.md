@@ -1,4 +1,4 @@
-# goveri_prototype_usability_test_tool
+# Goveri Prototype Usability Test Tool
 ## Table of contents
 * [General info](#general-info)
 * [Features](#features)
