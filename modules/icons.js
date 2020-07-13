@@ -1,5 +1,5 @@
 import edu from "./edu_modules/edu_main.js"
-import actionStream from "./actionstream.js";
+import actionStream from "./actionStream.js";
 import protest from "./protest.js"
 
 export let iaDiv = document.createElement("div");

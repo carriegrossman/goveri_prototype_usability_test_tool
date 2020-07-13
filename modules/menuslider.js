@@ -45,7 +45,7 @@ export default () => {
     nUlist.appendChild(nList1);
     let nList2 = document.createElement("li");
     nList2.setAttribute("id","contact-bar")
-    nList2.innerText = "Contact";
+    nList2.innerHTML = "<a href='#googleForm'>Contact</a>";
     nUlist.appendChild(nList2);
     let nList3 = document.createElement("li");
     nList3.setAttribute("id","raffle-bar")
