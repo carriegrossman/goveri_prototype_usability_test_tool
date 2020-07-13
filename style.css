@@ -12,6 +12,9 @@
     max-height:500px;
     animation-name:fadeOut;
     animation-duration: 6s;
+    overflow: hidden;
+    display: absolute;
+
 }
 
 /* logo on main */
@@ -403,6 +406,148 @@ button:hover {
     animation-name:fadeIn;
     animation-duration: 0.5s;
     z-index:9999;
+}
+
+
+/* menu slider */
+/* .x-menu{
+    margin: 0;
+    padding: 0;
+} */
+#sidebar {
+    position: absolute;
+    width: 150px;
+    /* height: 100%; */
+    /* background: rgba(0, 0, 0, 0.377); */
+    right: -300px;
+    transition: .2s;
+    margin-right: 730px;
+    top: 10px;
+    background: rgba(0, 0, 255, 0);
+
+}
+
+#sidebar.active {
+    right: -175px;
+    transition: .2s;
+}
+
+
+#sidebar ul li {
+    list-style: none;
+    color: #fff;
+    font-size: 20px;
+    padding: 15px 10px;
+    background: #5c5c5c7c;
+    /* visibility: hidden; */
+    border: 1px solid rgba(255, 255, 255, 0.651);
+    /* border-radius: 50px */
+}
+.ul-list {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s linear 75ms, opacity 75ms;
+}
+
+.ul-list.visible {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s linear 0s, opacity 300ms;
+}
+
+
+#sidebar .toggle-btn {
+    position: absolute;
+    top: 15px;
+    right: 130px;
+}
+
+/* .navspan1 {
+    background: rgb(224, 29, 29);
+    border: 0.5px solid black;
+}
+.navspan2 {
+    background: white;
+    border: 0.5px solid black;
+}
+.navspan3 {
+    background: rgb(35, 35, 247);
+    border: 0.5px solid black;
+} */
+
+
+.toggle-btn span {
+    width: 32px;
+    height: 4px;
+    background: linear-gradient(45deg,red,white,white,blue);
+    border: 1px solid rgba(0, 0, 0, 0.493);
+    display: block;
+    margin-top: 2px;
+    cursor: pointer;
+}
+
+#support-bar {
+    cursor: pointer;
+}
+#support-bar:hover {
+    color: rgba(0, 0, 0, 0);
+    background: url("./modules/img/venmo-icon.svg") no-repeat;
+    background-color: rgb(51, 150, 205);
+    border: 5px solid rgba(121, 115, 115, 0.822);
+}
+
+#support-bar:visited {
+    text-decoration: none;
+}
+
+#contact-bar {
+    cursor: pointer;
+}
+#contact-bar:hover {
+    color: rgba(0, 0, 0, 0);
+    background: url("./modules/img/contact.png") no-repeat;
+    background-color: rgb(113, 182, 43);
+    background-position: left;
+    background-size: 40px;
+    padding: 15px 10px;
+    border: 5px solid rgba(121, 115, 115, 0.822);
+}
+
+.raffle-nc {
+    font-size: 15px;
+    visibility: hidden;
+    opacity: 0;
+    /* transition: visibility 0s linear 75ms, opacity 75ms; */
+}
+
+.raffle-nc.time-visble{
+    text-align: center;
+    background: linear-gradient(45deg,red,white,white,blue);
+    border: 4px solid rgba(223, 98, 98, 0.555);
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s linear 0s, opacity 300ms;
+    border-radius: 20px;
+}
+
+#raffle-bar {
+    cursor: pointer;
+    padding: 15px 10px;
+    border: 1px solid white;
+}
+
+#raffle-bar:visited {
+    text-decoration: none;
+}
+
+#raffle-bar:hover {
+    color: rgba(0, 0, 0, 0);
+    background: url("./modules/img/raffle.png") no-repeat;
+    background-position: left;
+    background-color: rgb(219, 97, 97);
+    background-size: 60px;
+    padding: 15px 10px;
+    border: 5px solid rgba(121, 115, 115, 0.822);
 }
 
 .link-header {
