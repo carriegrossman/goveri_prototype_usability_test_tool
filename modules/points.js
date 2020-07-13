@@ -11,7 +11,6 @@ export default function addPoints(points){
     pointAndName.insertBefore(pointTally,usersName)
     // pointTally = document.createElement("p")
     pointTally.innerText = `${hardPoints} points`
-    
 }
 
 

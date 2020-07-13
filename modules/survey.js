@@ -5,9 +5,9 @@ export let dropdown1 = document.createElement("select")
 export let dropdown2 = document.createElement("select")
 
 let survey = () => {
-
+    alert("Complete the form to tell us what causes matter to you!")
     let cause1 = "Black Lives Matter"
-    let cause2 = "Environment"
+    let cause2 = "The Environment"
 
     let br = document.createElement("br")
 
@@ -64,7 +64,7 @@ let survey = () => {
         // event.preventDefault()
         form.remove()
         submitButton.remove()
-        loadActionList()
+        
         home()
     })
 }
