@@ -90,7 +90,10 @@ let loadActionList = () => {
             
             break;
         default:
-            actionListItem2 = "Take action by selecting a cause you care about in the menu at the top"
+            actionListItem2 = actions.election[1].item
+            actionListIcon2 = actions.election[1].icon//object property in actionItemsListArray with url for the respective icon - then in action.js have an array with actionIcon1, actionIcon2, and actionIcon3, setting the src attribute of an img created in the DOM to the right actionIcon
+            actionListUrl2 = actions.election[1].url
+            actionPointsValue2 = actions.election[1].points 
         }
     
     let cause3 = dropdown2.value
@@ -112,13 +115,15 @@ let loadActionList = () => {
             
             break;
         default:
-            actionListItem3 = "Take action by selecting a cause you care about in the menu at the top"
+            actionListItem3 = actions.election[2].item
+            actionListIcon3 = actions.election[2].icon//object property in actionItemsListArray with url for the respective icon - then in action.js have an array with actionIcon1, actionIcon2, and actionIcon3, setting the src attribute of an img created in the DOM to the right actionIcon
+            actionListUrl3 = actions.election[2].url
+            actionPointsValue3 = actions.election[2].points         
         }
-    
     //Creating the action list divs
     let ulDiv = document.createElement("div");
     ulDiv.setAttribute("id","ulist");
-    ulDiv.setAttribute("data-intro","This is the Action List. Your top 3 topics."); // ---- INTRO STEP 4
+    ulDiv.setAttribute("data-intro","This is your Action List. It's like a live to-do list to help you stay active. New items will appear after you complete each."); // ---- INTRO STEP 4
     ulDiv.setAttribute("data-step","4");
     
     let uList = document.createElement("ul");
@@ -141,10 +146,14 @@ let loadActionList = () => {
         //i keeps track of the order of the items
         let icon = document.createElement("img")
         icon.setAttribute("src", actionListIcons[i])
+        icon.setAttribute("data-intro","This icon tells you which category your Action Item is in."); // ---- INTRO STEP 4
+        icon.setAttribute("data-step","5");
         icon.className = "cause-icon"
         let item = document.createElement("button")
         item.className = "action-button"
         item.innerText = actionListItemsHolder[i]
+        item.setAttribute("data-intro","For this prototype, some items will open links outside of this page. In the final product of Goveri, you would use the information from these external links to complete your action item. This is just the prototype, however, and the form below (~15 minutes) is why you're here, so choose how to spend your time wisely. When an external link opens, click back into this tab to continue using the prototype."); // ---- INTRO STEP 4
+        item.setAttribute("data-step","6");
         console.log(actionListItemsHolder[0])
         let points = document.createElement("p")
         points.className = "points-container"
@@ -170,6 +179,16 @@ let loadActionList = () => {
                 hyperlink = actions.environment[envCounter].url
                 envCounter++
             }
+            if(liId == 1 && actionListItem2 == "Learn your state's mail-in ballot process!"){
+                hyperlink = actions.election[1].url
+                link()
+                electionCounter++
+            }
+            if(liId == 1 && actionListItem2 == "Learn more about local politics!"){
+                hyperlink = null
+                edu()
+                electionCounter++
+            }
             if(liId == 2 && actionListIcon3 == "modules/img/secondicon.png"){
                 hyperlink = actions.blm[blmCounter].url
                 blmCounter++
@@ -178,12 +197,33 @@ let loadActionList = () => {
                 hyperlink = actions.environment[envCounter].url
                 envCounter++
             }
-            if(liId == 0){
+            if(liId == 2 && actionListItem3 == `Learn more about local politics!`){
+                hyperlink = actions.election[2].url
+                edu()
+                electionCounter++
+            }
+            if(liId == 0 && hyperlink){
+                link()
+            }
+            if(liId == 0 && !hyperlink){
                 link()
                 edu()
             }
-            if(liId > 0){
-                link()
+            if(liId == 1){
+                if(actionListIcon2 == "modules/img/thirdicon.png"){
+                    link()
+                    edu()
+                } else {
+                    link()
+                }
+            }
+            if(liId == 2){
+                if(actionListIcon3 == "modules/img/thirdicon.png"){
+                    link()
+                    edu()
+                } else {
+                    link()
+                }
             }
             
             ulDiv.remove()
@@ -198,45 +238,9 @@ let loadActionList = () => {
         root.insertBefore(ulDiv,iDiv);
         
     }
-
-    
-    
-    
-    // let counter = 0
-    
-    
-    
-        
-
-    // let whichClicked = event.target.id
-    // if(whichClicked==0 || whichClicked == null){
-    //     addToElectionCounter()
-    // }
-    
-    // console.log(`Which clicked is: ${whichClicked}`)
-    // if(whichClicked==1){
-    //     addToBlmCounter()
-    // }
-    // if(whichClicked==2){
-    //     addToEnvCounter()
-    // }
-    // counter++
-    // console.log(counter)
-    // if(counter>0){
-    //     addToBlmCounter()
-    // }
-    // if(counter>4){
-    //     addToEnvCounter()
-    // }
-    let idx = 0
-        
-        
-    
-    // root.appendChild(iaDiv)
-    idx++
-    
-    console.log(idx)
-        console.log(`blmCounter : ${blmCounter},envCounter : ${envCounter},electionCounter : ${electionCounter},`)
+    if(hardPoints >= 500){
+        alert(`You earned 500 points! You're entered into the next raffle in your area! Have you filled out the form below yet?`)
+    }
 }
 
 export default loadActionList

@@ -11,6 +11,7 @@ logo.src = "./modules/img/goveri_logo.png";
 logo.setAttribute("class", "logo")
 root.append(logo);
 
+alert("Hello! Welcome to the Goveri Prototype Tool. Please use the app as you normally would for a few minutes, then complete the survey below. Thank you for helping us build the one-stop-shop for social and political activism!")
 login()
 
 // loginButton.addEventListener("click",()=>{
@@ -24,7 +25,6 @@ signUpButton.addEventListener("click",()=>{
     signUpForm()
     logo.remove()
     signUpButton.remove()
-    loginButton.remove()
     logo.remove()
 })
 
