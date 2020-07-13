@@ -431,16 +431,15 @@ button:hover {
     width: 150px;
     /* height: 100%; */
     /* background: rgba(0, 0, 0, 0.377); */
-    right: -570px;
+    right: 150px;
     transition: .2s;
-    margin-right: 730px;
     top: 10px;
     background: rgba(0, 0, 255, 0);
 
 }
 
 #sidebar.active {
-    right: -590px;
+    right: 100px;
     transition: .2s;
 }
 
