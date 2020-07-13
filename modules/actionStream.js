@@ -50,12 +50,16 @@ export default () => {
         likeIcon.setAttribute("src","modules/img/like.png")
         likeIcon.className = "stream-icon"
 
+        let plusFive = document.createElement("p")
+        plusFive.innerText = "+5"
+        plusFive.className = "plus-five"
+
         let commentIcon = document.createElement("img")
         commentIcon.setAttribute("src","modules/img/comment2.png")
         commentIcon.className = "stream-icon"
         commentIcon.setAttribute("id","comment-icon")
         
-        iconDiv.append(likeIcon,commentIcon)
+        iconDiv.append(likeIcon,plusFive,commentIcon)
 
         actionStreamItemDiv.append(actionStreamImg,iconDiv)
     }
